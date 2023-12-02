@@ -1,0 +1,209 @@
+@font-face {
+    font-family: futura;
+    src: url(./font/Futura-Bold.ttf);
+    font-display: swap;
+    /* font-family:gilroy;
+    src: url(./font/Gilroy-Medium.ttf); */
+}
+@font-face {
+    font-family: gilroy;
+    src: url(./font/Gilroy-Medium.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main {
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+#nav {
+    position: fixed;
+    z-index: 200;
+    /* background-color: aqua; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1vw 3vw;
+}
+#navpart1 #twoGood {
+    /* border: 1px solid red; */
+    height: 95px;
+    overflow: hidden;
+}
+#navpart1 svg {
+    display: block;
+}
+#navpart1 svg:nth-child(1) {
+    margin-bottom: 1vw;
+}
+#navpart2 {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+}
+#navpart2 .links a {
+    font-family: gilroy;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 3vw; 
+    font-size: 14px;
+}
+#navpart2 .icons {
+    width: 130px;
+    background-color: #eee;
+    padding: .5vw 1vw;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+#navpart2 .icons i {
+    font-size: 1.5vw;
+    font-stretch: extra-expanded;
+    font-weight: 100;
+}
+#navpart2 .icons i:nth-child(2) {
+    color: red;
+    margin-left: 2vw;
+}
+#hero {
+    margin-top: 15vh;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* border: 1px solid red;; */
+    /* background-color: #eee; */
+}
+
+#hero #header h1 {
+    text-transform: uppercase;
+    font-size: 15vw;
+    font-family: futura;
+    /* border: 1px solid red; */
+    text-align: center;
+    letter-spacing: -13px;
+    line-height: 13vw;
+}
+#changeContainer, #courseContainer {
+    overflow: hidden;
+}
+#header #change, #header #course {
+   transform: translateY(100%);
+}
+
+#hero #video-container {
+    width: 100%;
+    height: 100vh;
+    margin-top: 10px;
+    /* z-index: 99; */
+    position: relative;
+}
+#hero video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: gilroy;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    color: white;
+    background-color: black;
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    scale: 0;
+}
+#page1 {
+    /* border: 2px solid red; */
+    margin-top: 5vh;
+    width: 100%;
+    height: 100vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+#page1 .elem {
+    position: relative;
+    width: 32%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background-color: crimson;    */
+}
+#page1 .elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+.box {
+    position: absolute;
+    width: 70%;
+    height: 8%;
+    background-color: beige;
+    border-radius: 50px;
+    z-index: 10;
+    /* bottom: 40% */
+}
+
+#page2 {
+    position: relative;
+    margin-top: 1%;
+    width: 100%;
+    height: 100vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+
+}
+.item-container {
+    /* border: 1px solid red; */
+    height: 50%;
+    width: 45%;
+}
+.item-container > img {
+    width: 100%;
+    height: 100%;
+}
+#cursor {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+}
+
+section {
+    height: 30vh;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
