@@ -186,6 +186,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     padding: 0 2vw;
+    overflow: hidden;
 }
 #page1 .elem {
     position: relative;
@@ -213,7 +214,8 @@ html, body {
     /* bottom: 40% */
 }
 #page3 {
-    height: 70vh;
+    margin-top: -15vh;
+    height: 50vh;
     width: 100%;
     display: flex;
     font-family: 'Poppins', sans-serif;
