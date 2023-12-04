@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;900&display=swap');
 @font-face {
     font-family: futura;
     src: url(./font/Futura-Bold.ttf);
@@ -9,22 +10,44 @@
     font-family: gilroy;
     src: url(./font/Gilroy-Medium.ttf);
 }
+@font-face {
+    font-family: helvetica;
+    src: url(./font/HelveticaNowDisplayXBlk.otf);
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-#main {
+:root {
+    --font-color: #000;
+    --bg-color: #fff;
+}
+.active {
+    --font-color: #fff;
+    --bg-color: #000;
 }
 
 html, body {
     width: 100%;
     height: 100%;
 }
-#nav {
+#dropNav {
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
     position: fixed;
-    z-index: 200;
-    /* background-color: aqua; */
+    left: 0;
+    top: 0;
+    transform: translateY(-200%);
+    z-index: 300;
+    transform-origin: top right;
+    opacity: 0;
+}
+#nav {
+    color: var(--font-color);
+    position: fixed;
+    z-index: 400;
     width: 100%;
     top: 0;
     left: 0;
@@ -33,35 +56,57 @@ html, body {
     align-items: flex-start;
     padding: 1vw 3vw;
 }
+
+
 #navpart1 #twoGood {
-    /* border: 1px solid red; */
     height: 95px;
     overflow: hidden;
+    mix-blend-mode: difference;
 }
 #navpart1 svg {
     display: block;
+
 }
 #navpart1 svg:nth-child(1) {
     margin-bottom: 1vw;
 }
 #navpart2 {
     display: flex;
-    /* border: 1px solid red; */
     justify-content: space-between;
     align-items: center;
-    gap: 4vw;
+    gap: 3vw;
+}
+#navpart2 .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
 }
 #navpart2 .links a {
+    color: var(--font-color);
+    position: relative;
     font-family: gilroy;
-    color: black;
     text-transform: uppercase;
     text-decoration: none;
-    margin-right: 3vw; 
     font-size: 14px;
+    padding: 0 1vw;
+    
+}
+#navpart2 .links a::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: all ease-in-out .5s;
+}
+#navpart2 .links a:hover::after {
+    width: 100%;
 }
 #navpart2 .icons {
     width: 130px;
-    background-color: #eee;
+    background-color: var(--bg-color);
     padding: .5vw 1vw;
     border-radius: 50px;
     display: flex;
@@ -81,10 +126,10 @@ html, body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    /* border: 1px solid red;; */
-    /* background-color: #eee; */
 }
-
+#hero #header {
+    margin-top: 20vh;
+}
 #hero #header h1 {
     text-transform: uppercase;
     font-size: 15vw;
@@ -93,6 +138,9 @@ html, body {
     text-align: center;
     letter-spacing: -13px;
     line-height: 13vw;
+}
+#changeContainer {
+    margin-bottom: -40px;
 }
 #changeContainer, #courseContainer {
     overflow: hidden;
@@ -105,8 +153,6 @@ html, body {
     width: 100%;
     height: 100vh;
     margin-top: 10px;
-    /* z-index: 99; */
-    position: relative;
 }
 #hero video {
     object-fit: cover;
@@ -129,7 +175,7 @@ html, body {
     border-radius: 50%;
     z-index: 99;
     opacity: 0;
-    scale: 0;
+    transform: scale(0);
 }
 #page1 {
     /* border: 2px solid red; */
@@ -166,7 +212,39 @@ html, body {
     z-index: 10;
     /* bottom: 40% */
 }
-
+#page3 {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+}
+#page3 h1 {
+    text-transform: uppercase;
+    font-family: futura;
+    font-size: 4vw;
+    line-height: 4vw;
+    padding: 0 2vw;
+}
+#paraContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+#paraContainer p {
+    font-size: 1.1vw;
+    width: 65%;
+    line-height: 1.5vw;
+    font-weight: 400;
+}
+#paraContainer a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-stretch: extra-condensed;
+    letter-spacing: 1px;
+}
 #page2 {
     position: relative;
     margin-top: 1%;
